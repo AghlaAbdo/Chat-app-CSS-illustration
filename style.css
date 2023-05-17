@@ -1,0 +1,336 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: hsl(0, 0%, 98%);
+}
+h1 {
+    font-size: 3em;
+    color: hsl(271, 36%, 24%);
+    margin: 32px auto;
+}
+p {
+    color: hsl(270, 7%, 64%);
+    font-size: 1.3em;
+    line-height: 1.75;
+}
+.top-bg {
+    position: fixed;
+    width: 600px;
+    height: 90vh;
+    background-image: linear-gradient( 45deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    border-radius: 0 0 24em 24em;
+    left: -100px;
+    top: 0;
+    z-index: -1;
+}
+.bottom-bg {
+    position: fixed;
+    width: 600px;
+    height: 90vh;
+    background-color: hsla(289, 100%, 72%, 0.05);
+    border-radius: 24em 24em 0 0;
+    right: -150px;
+    bottom: 0;
+    z-index: -1;
+}
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+.left-arrow {
+    transform: rotate(135deg);
+  }
+.container {
+    display: flex;
+    gap: 128px;
+    align-items: center;
+    margin: auto 40px;
+}
+.phone-container {
+    max-width: 360px;
+    min-width: 300px;
+    background-color: white;
+    box-shadow: 15px 15px 35px  hsla(0, 0%, 0%, 0.15);
+    border-radius: 40px;
+    padding: 12px;
+    position: relative;
+}
+.phone-bg {
+    background-color: hsl(270, 20%, 96%);
+    border-radius: 40px;
+}
+.body-content {
+    padding: 12px;
+}
+.top-white {
+    position: absolute;
+    width: 55%;
+    height: 38px;
+    background-color: white;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 32px;
+}
+.top-nav {
+    background-image: linear-gradient(90deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    border-radius: 40px 40px 12px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 40px 24px 24px;
+    color: #FAFAFA;
+    box-shadow: 0px 3px 10px  rgba(0, 0, 0, 0.25);
+}
+
+.avatar-bg {
+    max-height: 40px;
+    max-width: 40px;
+    padding: 2px;
+    background-color: white;
+    border-radius: 50%;
+}
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.avatar-details .name {
+    display: block;
+    font-size: .95em;
+    font-weight: 500;
+}
+.avatar-details .is-available {
+    font-size: .7em;
+    color: hsl(276, 100%, 81%);
+}
+.dots div {
+    background-color: rgba(255, 255, 255, 0.76);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+}
+.dots {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.message-left {
+    background-color: hsla(276, 55%, 52%, 0.1);
+    border-radius: 16px 16px 16px 8px;
+    width: 62%;
+    margin-bottom: 12px;
+    padding: 8px 16px;
+    font-size: .7em;
+    line-height: 1.5;
+    color: hsl(276, 55%, 52%);
+}
+.dog img {
+    width: 55px;
+    border-radius: 16px;
+}
+.dog {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+.message-right {
+    background-color: white;
+    border-radius: 16px 16px 8px 16px;
+    max-width: 62%;
+    width: fit-content;
+    margin: 12px 0 12px auto;
+    padding: 8px 16px;
+    font-size: 0.7em;
+    line-height: 1.5;
+}
+.messages-right {
+    margin: 24px auto;
+}
+.option {
+    width: 75%;    
+    background-image: linear-gradient(-45deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    padding: 16px;
+    border-radius: 16px 16px 16px 8px;
+    margin: 12px 0;
+    color:#FAFAFA;
+    font-size: .7em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.radio-btn {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid hsl(289, 100%, 72%);
+}
+.option .price {
+    margin-left: auto;
+    font-size: 1em;
+    font-weight: 500;
+}
+.right-arrow {
+    transform: rotate(-45deg);
+}
+.bottom-message-input {
+    background-color: white;
+    border-radius: 40px;
+    padding: 6px;
+    margin: 20px auto 0;
+    display: flex;
+}
+.bottom-message-input span {
+    color: hsl(206, 6%, 79%);
+    font-size: .8em;
+    margin: auto 16px;
+}
+.arrow-bg {
+    margin-left: auto;
+    background-color: hsl(271, 36%, 24%);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-container {
+    max-width: 575px;
+}
+.attribution {
+    position: absolute;
+    font-size: 11px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+@media (max-width: 900px) {
+    .background-img {
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+    .top-bg {
+        position: absolute;
+        width: 60%;
+        height: 500px;
+        border-radius: 0 0 35rem 0;
+        left: -10%;
+    }
+    .bottom-bg {
+        position: absolute;
+        width: 60%;
+        height: 500px;
+        border-radius: 35rem 0 0;
+        right: -10%;
+    }
+    .container {
+        flex-direction: column;
+        margin: 64px 32px;
+        gap: 50px;
+    }
+    .text-container {
+        text-align: center;
+    }
+}
+@media (max-width: 500px) {
+    .container {
+        gap: 32px;
+    }
+    body {
+        font-size: 10px;
+        align-items: flex-start;
+    }
+    .phone-container {
+        max-width: 240px;
+        min-width: 100px;
+        padding: 8px;
+    }
+    .top-white {
+        width: 50%;
+        height: 24px;
+    }
+    .top-nav {
+        padding: 30px 12px 12px;
+    }
+    .avatar-bg {
+        max-height: 24px;
+        max-width: 24px;
+        padding: 1px;
+    }
+    .body-content {
+        padding: 10px;
+    }
+    .dots div {
+        width: 2px;
+        height: 2px;
+    }
+    .arrow {
+        width: 8px;
+        height: 8px;
+        
+    }
+    .left-arrow {
+        margin-right: -8px;
+    }
+    .message-left {
+        margin-bottom: 8px;
+        line-height: 1.3;
+        border-radius: 8px;
+    }
+    .messages-right {
+        margin: 12px auto;
+    }
+    .dog {
+        gap: 8px;
+    }
+    .dog img {
+        width: 40px;
+        border-radius: 12px;
+    }
+    .message-right {
+        margin: 8px 0 8px auto;
+        line-height: 1.3;
+        border-radius: 8px;
+    }
+    .option {
+        padding: 8px 16px;
+        margin: 8px 0;
+        border-radius: 8px;
+    }
+    .radio-btn {
+        width: 12px;
+        height: 12px;
+    }
+    .arrow-bg {
+        width: 24px;
+        height: 24px;
+    }
+    .bottom-message-input {
+        margin:12px auto 0;
+    }
+}
